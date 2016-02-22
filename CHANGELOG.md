@@ -20,3 +20,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [0.9.0] - 2025-07-15
 
 ### Added
+
+- A second implementation in the parity scripts, compared on every fixture.
+- `scripts/parity.py` comparing the two engines on every fixture.
+
+## [0.8.0] - 2024-06-11
