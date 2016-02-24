@@ -44,3 +44,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - JSON report with fixed keys, including per-owner summaries.
 - `bands` and `owners` subcommands.
+
+## [0.5.0] - 2021-01-19
+
+### Added
