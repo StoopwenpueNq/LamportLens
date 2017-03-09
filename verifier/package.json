@@ -5,3 +5,4 @@
   "type": "module",
   "description": "Independent TypeScript verifier for the lamportlens rent arithmetic.",
   "scripts": {
+    "build": "tsc",
