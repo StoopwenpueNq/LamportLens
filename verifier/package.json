@@ -9,3 +9,4 @@
     "typecheck": "tsc --noEmit",
     "test": "node --test dist/*.test.js"
   },
+  "devDependencies": {
