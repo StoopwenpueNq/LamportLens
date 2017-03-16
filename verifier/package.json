@@ -8,3 +8,4 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "node --test dist/*.test.js"
+  },
