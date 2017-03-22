@@ -10,3 +10,4 @@
     "test": "node --test dist/*.test.js"
   },
   "devDependencies": {
+    "@types/node": "20.16.1",
