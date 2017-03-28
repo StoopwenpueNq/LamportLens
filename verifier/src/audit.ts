@@ -9,3 +9,9 @@ import {
   STATUS_AT_MINIMUM,
   STATUS_BARELY_ABOVE,
   STATUS_EXCLUDED,
+  STATUS_FUNDED,
+  STATUS_UNDERFUNDED,
+  assess,
+  minimumBalance,
+} from "./rent.js";
+
