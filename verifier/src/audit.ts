@@ -15,3 +15,9 @@ import {
   minimumBalance,
 } from "./rent.js";
 
+export const BANDS: Array<[string, number, number]> = [
+  ["0 bytes", 0, 0],
+  ["1-99", 1, 99],
+  ["100-999", 100, 999],
+  ["1k-9.9k", 1_000, 9_999],
+  ["10k-99k", 10_000, 99_999],
