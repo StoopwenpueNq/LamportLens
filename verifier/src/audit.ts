@@ -33,3 +33,9 @@ export interface AuditResult {
   bands: Array<{ label: string; accounts: number; locked: number }>;
   underfunded: Array<{ address: string; owner: string; lamports: number; minimum: number; deficit: number }>;
   parseErrors: ParseError[];
+}
+
+const STATUS_ORDER = [
+  STATUS_UNDERFUNDED,
+  STATUS_AT_MINIMUM,
+  STATUS_BARELY_ABOVE,
