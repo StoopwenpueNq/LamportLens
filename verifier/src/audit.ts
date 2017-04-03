@@ -27,3 +27,9 @@ export const BANDS: Array<[string, number, number]> = [
 
 export interface AuditResult {
   records: number;
+  findings: number;
+  statusCounts: Record<string, number>;
+  totals: { locked: number; balance: number; deficit: number; reclaimable: number };
+  bands: Array<{ label: string; accounts: number; locked: number }>;
+  underfunded: Array<{ address: string; owner: string; lamports: number; minimum: number; deficit: number }>;
+  parseErrors: ParseError[];
