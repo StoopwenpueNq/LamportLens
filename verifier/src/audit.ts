@@ -52,3 +52,9 @@ function bandLabel(dataLen: number): string {
 
 export function audit(
   records: AccountRecord[],
+  parseErrors: ParseError[],
+  lamportsPerByte = DEFAULT_LAMPORTS_PER_BYTE,
+): AuditResult {
+  const statusCounts: Record<string, number> = {};
+  const bands = BANDS.map(([label]) => ({ label, accounts: 0, locked: 0 }));
+  const bandIndex = new Map(bands.map((band) => [band.label, band]));
