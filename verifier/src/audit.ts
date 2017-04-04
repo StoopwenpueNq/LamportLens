@@ -45,3 +45,10 @@ const STATUS_ORDER = [
 
 function bandLabel(dataLen: number): string {
   for (const [label, low, high] of BANDS) {
+    if (dataLen >= low && dataLen <= high) return label;
+  }
+  return BANDS[BANDS.length - 1][0];
+}
+
+export function audit(
+  records: AccountRecord[],
