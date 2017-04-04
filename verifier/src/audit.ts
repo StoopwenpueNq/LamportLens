@@ -39,3 +39,9 @@ const STATUS_ORDER = [
   STATUS_UNDERFUNDED,
   STATUS_AT_MINIMUM,
   STATUS_BARELY_ABOVE,
+  STATUS_FUNDED,
+  STATUS_EXCLUDED,
+];
+
+function bandLabel(dataLen: number): string {
+  for (const [label, low, high] of BANDS) {
