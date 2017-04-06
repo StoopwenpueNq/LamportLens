@@ -70,3 +70,9 @@ export function audit(
       totals.deficit += deficit;
       underfunded.push({
         address: record.address,
+        owner: record.owner,
+        lamports: record.lamports,
+        minimum,
+        deficit,
+      });
+    }
