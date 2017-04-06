@@ -58,3 +58,9 @@ export function audit(
   const statusCounts: Record<string, number> = {};
   const bands = BANDS.map(([label]) => ({ label, accounts: 0, locked: 0 }));
   const bandIndex = new Map(bands.map((band) => [band.label, band]));
+  const underfunded: AuditResult["underfunded"] = [];
+  const totals = { locked: 0, balance: 0, deficit: 0, reclaimable: 0 };
+
+  for (const record of records) {
+    const status = assess(record, lamportsPerByte);
+    statusCounts[status] = (statusCounts[status] ?? 0) + 1;
