@@ -64,3 +64,9 @@ export function audit(
   for (const record of records) {
     const status = assess(record, lamportsPerByte);
     statusCounts[status] = (statusCounts[status] ?? 0) + 1;
+    const minimum = minimumBalance(record.dataLen, lamportsPerByte);
+    if (status === STATUS_UNDERFUNDED) {
+      const deficit = minimum - record.lamports;
+      totals.deficit += deficit;
+      underfunded.push({
+        address: record.address,
