@@ -88,3 +88,9 @@ export function audit(
         band.locked += minimum;
       }
     }
+  }
+
+  underfunded.sort((a, b) => b.deficit - a.deficit || (a.address < b.address ? -1 : 1));
+
+  const sortedCounts: Record<string, number> = {};
+  for (const status of STATUS_ORDER) sortedCounts[status] = statusCounts[status] ?? 0;
