@@ -82,3 +82,9 @@ export function audit(
       if (status === STATUS_AT_MINIMUM || status === STATUS_BARELY_ABOVE) {
         totals.reclaimable += record.lamports;
       }
+      const band = bandIndex.get(bandLabel(record.dataLen));
+      if (band) {
+        band.accounts += 1;
+        band.locked += minimum;
+      }
+    }
