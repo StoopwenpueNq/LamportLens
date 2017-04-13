@@ -76,3 +76,9 @@ export function audit(
         deficit,
       });
     }
+    if (status !== STATUS_EXCLUDED) {
+      totals.locked += minimum;
+      totals.balance += record.lamports;
+      if (status === STATUS_AT_MINIMUM || status === STATUS_BARELY_ABOVE) {
+        totals.reclaimable += record.lamports;
+      }
