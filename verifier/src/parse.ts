@@ -6,3 +6,7 @@ import { AccountRecord, MAX_ACCOUNT_DATA_LEN } from "./rent.js";
 
 export interface ParseError {
   line: number;
+  message: string;
+}
+
+function requireNonEmptyString(obj: Record<string, unknown>, key: string, line: number): string {
