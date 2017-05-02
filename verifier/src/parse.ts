@@ -20,3 +20,7 @@ function requireNonEmptyString(obj: Record<string, unknown>, key: string, line: 
 
 function requireInteger(
   obj: Record<string, unknown>,
+  key: string,
+  line: number,
+  minimum: number,
+  maximum?: number,
