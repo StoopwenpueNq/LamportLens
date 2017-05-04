@@ -29,3 +29,7 @@ function requireInteger(
   const value = obj[key];
   if (typeof value !== "number" || !Number.isInteger(value)) {
     throw new FormatError(`line ${line}: field '${key}' must be an integer`);
+  }
+  if (value < minimum) throw new FormatError(`line ${line}: field '${key}' must be >= ${minimum}`);
+  if (maximum !== undefined && value > maximum) {
+    throw new FormatError(`line ${line}: field '${key}' must be <= ${maximum}`);
