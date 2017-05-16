@@ -47,3 +47,8 @@ export function parseRecord(value: unknown, line: number): AccountRecord {
   const address = requireNonEmptyString(obj, "address", line);
   const lamports = requireInteger(obj, "lamports", line, 0);
   const dataLen = requireInteger(obj, "data_len", line, 0, MAX_ACCOUNT_DATA_LEN);
+  const owner = requireNonEmptyString(obj, "owner", line);
+  let executable = false;
+  if ("executable" in obj && obj["executable"] !== null) {
+    if (typeof obj["executable"] !== "boolean") {
+      throw new FormatError(`line ${line}: field 'executable' must be a boolean`);
