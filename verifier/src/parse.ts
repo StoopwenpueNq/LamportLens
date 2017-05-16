@@ -38,3 +38,8 @@ function requireInteger(
 }
 
 export class FormatError extends Error {}
+
+export function parseRecord(value: unknown, line: number): AccountRecord {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) {
+    throw new FormatError(`line ${line}: record must be a JSON object`);
+  }
