@@ -52,3 +52,7 @@ export function parseRecord(value: unknown, line: number): AccountRecord {
   if ("executable" in obj && obj["executable"] !== null) {
     if (typeof obj["executable"] !== "boolean") {
       throw new FormatError(`line ${line}: field 'executable' must be a boolean`);
+    }
+    executable = obj["executable"];
+  }
+  return { address, lamports, dataLen, owner, executable, line };
