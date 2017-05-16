@@ -56,3 +56,8 @@ export function parseRecord(value: unknown, line: number): AccountRecord {
     executable = obj["executable"];
   }
   return { address, lamports, dataLen, owner, executable, line };
+}
+
+export function parseText(text: string): { records: AccountRecord[]; errors: ParseError[] } {
+  const records: AccountRecord[] = [];
+  const errors: ParseError[] = [];
