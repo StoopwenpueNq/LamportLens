@@ -66,3 +66,7 @@ export function parseText(text: string): { records: AccountRecord[]; errors: Par
     const raw = lines[index];
     if (raw.trim() === "") continue;
     const number = index + 1;
+    let decoded: unknown;
+    try {
+      decoded = JSON.parse(raw);
+    } catch {
