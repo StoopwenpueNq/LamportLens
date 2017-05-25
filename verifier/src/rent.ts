@@ -6,3 +6,6 @@
 
 export const ACCOUNT_STORAGE_OVERHEAD = 128;
 
+export const RATE_PRESETS: Record<string, number> = {
+  salvage: 696,
+  "simd-0437-5": 696,
