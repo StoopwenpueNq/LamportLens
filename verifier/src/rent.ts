@@ -16,3 +16,6 @@ export const RATE_PRESETS: Record<string, number> = {
   "simd-0194": 6960,
   historical: 6960,
 };
+
+export const DEFAULT_LAMPORTS_PER_BYTE = 6333;
+
