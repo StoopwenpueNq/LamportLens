@@ -12,3 +12,7 @@ export const RATE_PRESETS: Record<string, number> = {
   "simd-0437-4": 1322,
   "simd-0437-3": 2575,
   "simd-0437-2": 5080,
+  "simd-0437-1": 6333,
+  "simd-0194": 6960,
+  historical: 6960,
+};
