@@ -31,3 +31,7 @@ export const MAX_ACCOUNT_DATA_LEN = 10_485_760;
 
 export interface AccountRecord {
   address: string;
+  lamports: number;
+  dataLen: number;
+  owner: string;
+  executable: boolean;
