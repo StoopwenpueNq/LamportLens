@@ -28,3 +28,6 @@ export const STATUS_EXCLUDED = "executable-excluded";
 export const BARELY_ABOVE_RATIO = 1.01;
 
 export const MAX_ACCOUNT_DATA_LEN = 10_485_760;
+
+export interface AccountRecord {
+  address: string;
