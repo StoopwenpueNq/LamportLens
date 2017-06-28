@@ -25,3 +25,6 @@ export const STATUS_BARELY_ABOVE = "barely-above";
 export const STATUS_FUNDED = "funded";
 export const STATUS_EXCLUDED = "executable-excluded";
 
+export const BARELY_ABOVE_RATIO = 1.01;
+
+export const MAX_ACCOUNT_DATA_LEN = 10_485_760;
