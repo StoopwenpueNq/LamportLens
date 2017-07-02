@@ -35,3 +35,6 @@ export interface AccountRecord {
   dataLen: number;
   owner: string;
   executable: boolean;
+  line: number;
+}
+
