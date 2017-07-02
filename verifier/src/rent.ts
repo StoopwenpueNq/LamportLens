@@ -38,3 +38,6 @@ export interface AccountRecord {
   line: number;
 }
 
+export function minimumBalance(dataLen: number, lamportsPerByte = DEFAULT_LAMPORTS_PER_BYTE): number {
+  if (dataLen < 0) throw new Error("dataLen must be >= 0");
+  if (lamportsPerByte <= 0) throw new Error("lamportsPerByte must be > 0");
