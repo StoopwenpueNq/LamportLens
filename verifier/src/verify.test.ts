@@ -5,3 +5,6 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { test } from "node:test";
+import assert from "node:assert/strict";
+
+import { auditText } from "./audit.js";
