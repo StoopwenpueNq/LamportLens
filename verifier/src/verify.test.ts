@@ -8,3 +8,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 
 import { auditText } from "./audit.js";
+import { AccountRecord, assess, minimumBalance } from "./rent.js";
+
+const here = dirname(fileURLToPath(import.meta.url));
+const samples = join(here, "..", "..", "samples");
