@@ -12,3 +12,7 @@ import { AccountRecord, assess, minimumBalance } from "./rent.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const samples = join(here, "..", "..", "samples");
+
+function sample(name: string): string {
+  return readFileSync(join(samples, name), "utf8");
+}
