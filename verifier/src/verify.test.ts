@@ -16,3 +16,7 @@ const samples = join(here, "..", "..", "samples");
 function sample(name: string): string {
   return readFileSync(join(samples, name), "utf8");
 }
+
+function record(lamports: number, dataLen: number, executable = false): AccountRecord {
+  return { address: "A".repeat(44), lamports, dataLen, owner: "O".repeat(44), executable, line: 1 };
+}
