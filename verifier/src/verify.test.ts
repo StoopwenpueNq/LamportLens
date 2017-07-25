@@ -24,3 +24,7 @@ function record(lamports: number, dataLen: number, executable = false): AccountR
 test("formula anchors", () => {
   assert.equal(minimumBalance(0), 810_624);
   assert.equal(minimumBalance(165), 1_855_569);
+  assert.equal(minimumBalance(0, 6960), 890_880);
+  assert.equal(minimumBalance(165, 6960), 2_039_280);
+});
+
