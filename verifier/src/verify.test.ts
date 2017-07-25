@@ -28,3 +28,7 @@ test("formula anchors", () => {
   assert.equal(minimumBalance(165, 6960), 2_039_280);
 });
 
+test("status classification", () => {
+  assert.equal(assess(record(800_000, 0)), "underfunded");
+  assert.equal(assess(record(810_624, 0)), "at-minimum");
+  assert.equal(assess(record(815_000, 0)), "barely-above");
