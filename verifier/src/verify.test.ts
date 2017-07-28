@@ -55,3 +55,7 @@ test("snapshot counts match the designed fixture", () => {
   assert.equal(result.statusCounts["executable-excluded"], 2);
   assert.equal(result.totals.deficit, 255_569 + 655_569 + 110_624);
   const zero = result.bands.find((band) => band.label === "0 bytes");
+  assert.equal(zero?.accounts, 3);
+  assert.equal(zero?.locked, 3 * 810_624);
+});
+
