@@ -47,3 +47,7 @@ test("clean snapshot has no findings", () => {
 test("snapshot counts match the designed fixture", () => {
   const result = auditText(sample("snapshot.jsonl"));
   assert.equal(result.records, 44);
+  assert.equal(result.findings, 3);
+  assert.equal(result.statusCounts["underfunded"], 3);
+  assert.equal(result.statusCounts["at-minimum"], 7);
+  assert.equal(result.statusCounts["barely-above"], 1);
