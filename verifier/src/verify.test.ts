@@ -51,3 +51,7 @@ test("snapshot counts match the designed fixture", () => {
   assert.equal(result.statusCounts["underfunded"], 3);
   assert.equal(result.statusCounts["at-minimum"], 7);
   assert.equal(result.statusCounts["barely-above"], 1);
+  assert.equal(result.statusCounts["funded"], 31);
+  assert.equal(result.statusCounts["executable-excluded"], 2);
+  assert.equal(result.totals.deficit, 255_569 + 655_569 + 110_624);
+  const zero = result.bands.find((band) => band.label === "0 bytes");
