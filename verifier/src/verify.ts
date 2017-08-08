@@ -10,3 +10,8 @@
 
 import { readFileSync } from "node:fs";
 import { auditText } from "./audit.js";
+import { DEFAULT_LAMPORTS_PER_BYTE, RATE_PRESETS } from "./rent.js";
+
+function main(argv: string[]): number {
+  const args = argv.slice(2);
+  let path: string | null = null;
