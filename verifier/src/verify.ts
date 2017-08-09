@@ -20,3 +20,7 @@ function main(argv: string[]): number {
 
   for (let i = 0; i < args.length; i += 1) {
     const arg = args[i];
+    if (arg === "--lamports-per-byte") {
+      lamportsPerByte = Number(args[++i]);
+    } else if (arg === "--preset") {
+      preset = args[++i] ?? null;
