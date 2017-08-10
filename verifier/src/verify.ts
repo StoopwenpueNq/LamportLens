@@ -24,3 +24,8 @@ function main(argv: string[]): number {
       lamportsPerByte = Number(args[++i]);
     } else if (arg === "--preset") {
       preset = args[++i] ?? null;
+    } else if (path === null) {
+      path = arg;
+    } else {
+      process.stderr.write("verify: unexpected argument " + arg + "\n");
+      return 2;
