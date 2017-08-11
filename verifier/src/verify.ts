@@ -29,3 +29,8 @@ function main(argv: string[]): number {
     } else {
       process.stderr.write("verify: unexpected argument " + arg + "\n");
       return 2;
+    }
+  }
+
+  if (path === null) {
+    process.stderr.write("usage: verify <snapshot.jsonl> [--lamports-per-byte N] [--preset name]\n");
