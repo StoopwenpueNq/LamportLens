@@ -34,3 +34,7 @@ function main(argv: string[]): number {
 
   if (path === null) {
     process.stderr.write("usage: verify <snapshot.jsonl> [--lamports-per-byte N] [--preset name]\n");
+    return 2;
+  }
+
+  let rate = DEFAULT_LAMPORTS_PER_BYTE;
