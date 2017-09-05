@@ -57,3 +57,8 @@ function main(argv: string[]): number {
   try {
     text = readFileSync(path, "utf8");
   } catch (error) {
+    process.stderr.write("verify: cannot read " + path + "\n");
+    return 2;
+  }
+
+  const result = auditText(text, rate);
