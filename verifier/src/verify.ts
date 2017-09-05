@@ -48,3 +48,7 @@ function main(argv: string[]): number {
     const value = RATE_PRESETS[preset];
     if (value === undefined) {
       process.stderr.write("verify: unknown preset " + preset + "\n");
+      return 2;
+    }
+    rate = value;
+  }
