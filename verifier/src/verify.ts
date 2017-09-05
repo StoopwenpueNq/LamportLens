@@ -52,3 +52,8 @@ function main(argv: string[]): number {
     }
     rate = value;
   }
+
+  let text: string;
+  try {
+    text = readFileSync(path, "utf8");
+  } catch (error) {
