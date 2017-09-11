@@ -62,3 +62,7 @@ function main(argv: string[]): number {
   }
 
   const result = auditText(text, rate);
+  const payload = {
+    input: path,
+    records: result.records,
+    lamports_per_byte: rate,
