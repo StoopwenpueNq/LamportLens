@@ -7,3 +7,4 @@
     "outDir": "dist",
     "rootDir": "src",
     "declaration": false,
+    "sourceMap": false,
