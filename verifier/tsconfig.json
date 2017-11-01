@@ -5,3 +5,4 @@
     "moduleResolution": "NodeNext",
     "strict": true,
     "outDir": "dist",
+    "rootDir": "src",
