@@ -8,3 +8,4 @@
     "rootDir": "src",
     "declaration": false,
     "sourceMap": false,
+    "forceConsistentCasingInFileNames": true,
