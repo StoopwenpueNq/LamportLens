@@ -10,3 +10,4 @@
     "sourceMap": false,
     "forceConsistentCasingInFileNames": true,
     "types": ["node"],
+    "skipLibCheck": true
