@@ -21,3 +21,9 @@ classifiers = [
 lamportlens = "lamportlens.cli:main"
 
 [tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+<!-- draft note 1228 -->
