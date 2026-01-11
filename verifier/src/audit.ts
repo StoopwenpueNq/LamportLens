@@ -94,3 +94,19 @@ export function audit(
 
   const sortedCounts: Record<string, number> = {};
   for (const status of STATUS_ORDER) sortedCounts[status] = statusCounts[status] ?? 0;
+
+  return {
+    records: records.length,
+    findings: underfunded.length + parseErrors.length,
+    statusCounts: sortedCounts,
+    totals,
+    bands,
+    underfunded,
+    parseErrors,
+  };
+}
+
+export function auditText(text: string, lamportsPerByte = DEFAULT_LAMPORTS_PER_BYTE): AuditResult {
+  const { records, errors } = parseText(text);
+  return audit(records, errors, lamportsPerByte);
+}
