@@ -7,5 +7,3 @@ distributed per owner.
 """
 
 __version__ = "0.1.0"
-
-// draft note 1226
