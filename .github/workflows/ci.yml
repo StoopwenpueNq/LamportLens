@@ -55,5 +55,3 @@ jobs:
         run: cd verifier && npm ci && npm run build
       - name: Compare engines on the fixtures
         run: python scripts/parity.py
-
-// draft note 1231
