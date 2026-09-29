@@ -10,6 +10,31 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Rule wording is being reviewed for the next patch.
 - A summary mode is being sketched for dashboards.
 
+## [5.1.0] - 2026-09-15
+
+### Added
+
+- A `--summary` mode printing only the totals line, for dashboards.
+
+## [4.3.0] - 2026-08-14
+
+### Added
+
+- A per-owner deficit table in the JSON report.
+
+## [3.4.0] - 2026-07-17
+
+### Added
+
+- The `barely-above` band split into two ratio steps.
+
+## [2.5.0] - 2026-06-29
+
+### Added
+
+- The report carries a `rates` block naming the pinned rate per run.
+- Fixtures for the executable-excluded classification.
+
 ## [1.0.0] - 2026-06-02
 
 ### Added
