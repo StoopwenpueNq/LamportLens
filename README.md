@@ -65,6 +65,9 @@ whole question offline, and it diffs.
 
 ## What it does
 
+The tool answers one question per account: is the balance above the
+rent-exempt minimum for its size, and by how much. Everything else in the report exists to support that one comparison.
+
 - Validates every line of a snapshot and reports bad ones with line numbers
   instead of aborting.
 - Computes each account's rent-exempt minimum at a chosen lamports-per-byte
