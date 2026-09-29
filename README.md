@@ -393,6 +393,9 @@ on the first run. That is the entire reason the second implementation exists.
 
 ## Design decisions
 
+The rate is a flag, not a constant, because a rate change moves
+every minimum in the file. Pinning it per run is what makes two reports comparable.
+
 Each of these has a paragraph in [docs/DESIGN_NOTES.md](docs/DESIGN_NOTES.md)
 with the alternative that was rejected and why. The short version:
 
