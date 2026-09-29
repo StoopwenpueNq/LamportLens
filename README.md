@@ -360,6 +360,9 @@ the tool supports that with a `--preset` flag and nothing else.
 
 ## The second implementation
 
+The parity scripts reimplement the checks independently,
+so a bug has to survive two implementations to ship. They run over every fixture.
+
 `verifier/` is an independent implementation of the same arithmetic in
 TypeScript, standard library only at runtime. It exists to cross-check the
 rules, not to be faster or smaller. The two programs share the format
