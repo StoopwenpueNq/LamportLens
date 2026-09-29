@@ -244,6 +244,9 @@ where to spend attention.
 
 ## The input format
 
+The input is a JSONL snapshot, one account per line, so a capture
+can be sliced with standard tools and a diff between snapshots stays readable.
+
 One JSON object per line. The fields, their types and their rules:
 
 | Field | Type | Required | Rules |
